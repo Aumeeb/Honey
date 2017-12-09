@@ -1,0 +1,16 @@
+[
+  {
+    "title":"title1",
+    "content":"news-1",
+    "pubDate":"",
+    "_id":"1",
+    "link":"link2"
+  },
+  {
+    "title":"title2",
+    "content":"news-2",
+    "pubDate":"",
+    "_id":"2",
+    "link":"link2"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "menus":[
+    {
+      "icon" : "user",
+      "name" : "用户中心",
+      "url" : "accountManagement",
+      "children":[
+        {
+          "name" : "基本信息",
+          "url":"basicInformation"
+        },{
+          "name" : "安全设置",
+          "url":"securitySettings"
+        },{
+          "name" : "实名认证",
+          "url":"realNameAuthentication"
+        }
+      ]
+    },{
+      "icon" : "pay-circle-o",
+      "name" : "费用中心" ,
+      "url" : "costCenter",
+      "children" : [
+        {
+          "name" : "账户总览",
+          "url" : "overview"
+        },{
+          "name" : "资金情况",
+          "url" : "financialStatus"
+        },{
+          "name" : "订单管理",
+          "url" : "orderManagement"
+        },{
+          "name" : "合同管理",
+          "url" : "agreementManagement"
+        }
+      ]
+    },{
+      "icon" :"form",
+      "name" : "工单管理",
+      "url" : "orderManagement",
+      "children":[]
+    }
+  ]
+}

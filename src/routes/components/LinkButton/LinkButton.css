@@ -1,0 +1,14 @@
+
+.linkButton{
+  color:white;
+  width: 100px;
+  height: 28px;
+  display: inline-block;
+  border: rgb(3, 187, 227) 1px solid;
+  color:  rgb(3, 187, 227);
+  font-size: 14px;
+  border-radius: 1px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration-line: none;
+}
