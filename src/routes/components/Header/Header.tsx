@@ -1,22 +1,24 @@
 
 import * as React from 'react'
-
 import Link from '../Link/Link'
 // import LinkButton from '../../components/LinkButton/LinkButton'
 import './Header.css'
+import s from "./Header.css";
 
 import navi_icon_language from '../../Images/navi_icon_language.png';
 import navi_logo from '../../Images/navi_logo.png';
 import navi_icon_search from '../../Images/navi_icon_search.png';
 import navi_icon_menu from '../../Images/navi_icon_menu.png';
 
+ 
 class Header extends React.Component {
+
   render() {
 
     return (
       <div id='header-root'>
-
-        <div className='topBar'>
+      
+        <div className={s.topBar}>
 
           <span><img src={navi_icon_language} /></span>
           <span>中国</span>

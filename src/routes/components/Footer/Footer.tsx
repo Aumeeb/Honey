@@ -2,7 +2,7 @@
 import * as React from 'react'
 // import Link from '../Link/Link'
 import './Footer.css'
-
+import { Test} from './index'
 import code2d from '../../Images/code2d.jpg';
 
 interface IFooterProps {
@@ -34,7 +34,8 @@ class Footer extends React.Component<IFooterProps, any> {
             footerDataExsits = ['无数据', '无数据'];
         }
         return (
-            <div id='footer-root'  >
+            <div >
+                <Test>12312321</Test>
                 <address className='address'>
                     <div>
                         <header>新闻中心</header>

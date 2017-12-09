@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import Link from '../components/Link/Link'
 import LinkButton from '../components/LinkButton/LinkButton'
-
+import { Container } from "../components/Containers/index";
 import './Home.css';
 
 import nes_icon1 from '../Images/nes_icon1.png';
@@ -54,7 +54,7 @@ class Home extends React.Component<IHomeProps, any> {
           `}}></script>
                 </div>
 
-                <div className={'container'}>
+                <Container>
 
                     <div className={`latestProduct`}>
 
@@ -266,7 +266,7 @@ class Home extends React.Component<IHomeProps, any> {
                             <div><LinkButton linkValue="查看更多" /></div>
                         </div>
                     </div>
-                </div>
+                </Container>
 
             </div>
         );
