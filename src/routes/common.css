@@ -92,9 +92,17 @@ ul{
     height: 630px;
     background-size: 100%;
 }
-
+a{
+    text-decoration:none;
+    color:white;
+}
+ul{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
 /* 容器 */
 .container{
-  width : 100%;
+  width : 1200px;
   height : 100%;
 }

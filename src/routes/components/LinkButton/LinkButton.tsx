@@ -9,10 +9,10 @@ interface ILinkButtonProps {
 }
 
 class LinkButton extends React.Component<ILinkButtonProps, any>{
-    constructor(public props: ILinkButtonProps) {
+    constructor( props: ILinkButtonProps) {
         super(props)
         this.props = {
-            linkValue: 'null',
+            linkValue: '查看详情',
             styleColor: undefined,
             to: '/'
         };

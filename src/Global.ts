@@ -1,0 +1,1 @@
+export const imgPath: string = 'C:/Users/Administrator/Desktop/Honey/src/routes/Images/';

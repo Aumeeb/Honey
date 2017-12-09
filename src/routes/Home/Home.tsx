@@ -5,6 +5,13 @@ import LinkButton from '../components/LinkButton/LinkButton'
 
 import './Home.css';
 
+import nes_icon1 from '../Images/nes_icon1.png';
+import nes_icon2 from '../Images/nes_icon2.png';
+import logo_a1 from '../Images/logo_a1.png';
+import logo_a2 from '../Images/logo_a2.png';
+import logo_a3 from '../Images/logo_a3.png';
+
+
 interface IHomeProps {
 
 }
@@ -77,13 +84,11 @@ class Home extends React.Component<IHomeProps, any> {
                                 <div>文字问问释放了江苏电力负荷适当放宽了江苏的房间里</div>
                             </div>
                         </div>
-                        <LinkButton />
+                        <LinkButton linkValue={`查看详情`} />
                     </div>
 
                     {/* industry Information */}
                     <div className={`textAlignCenter`}>
-                        {/* blue arrow  暂时被取消掉的模块*/}
-                        {/* <div className={s.arrow}><img src='./icon_tips.png'/></div> */}
                         <div className={`latestProductTitle`} ><span>资讯</span><span>服务</span></div>
                         <div className={`latestProductETitle`} >INFORMATION</div>
 
@@ -171,14 +176,14 @@ class Home extends React.Component<IHomeProps, any> {
                     <div className={`demandContainer`}>
                         <div>
                             <div>
-                                <div><img src='./nes_icon1.png' /></div>
+                                <div><img src={nes_icon1} /></div>
                                 <div>最新商品需求</div>
                                 <div>COMMODIT DEMAND</div>
                                 <div><LinkButton linkValue={`查看更多`} styleColor={'white'} /></div>
                             </div>
                             <div className={`abilityRequirement`}>
 
-                                <div><img src='./nes_icon2.png' /></div>
+                                <div><img src={nes_icon2} /></div>
                                 <div>最新能力需求</div>
                                 <div>COMMODIT DEMAND</div>
 
@@ -230,14 +235,14 @@ class Home extends React.Component<IHomeProps, any> {
                         </div>
                         <div className={`cooperativePartnerBrand`}>
                             <ul>
-                                <li><img src="./logo_a1.png" /></li>
-                                <li><img src="./logo_a2.png" /></li>
-                                <li><img src="./logo_a3.png" /></li>
-                                <li><img src="./logo_a1.png" /></li>
-                                <li><img src="./logo_a2.png" /></li>
-                                <li><img src="./logo_a3.png" /></li>
-                                <li><img src="./logo_a2.png" /></li>
-                                <li><img src="./logo_a3.png" /></li>
+                                <li><img src={logo_a1} /></li>
+                                <li><img src={logo_a2} /></li>
+                                <li><img src={logo_a3} /></li>
+                                <li><img src={logo_a2} /></li>
+                                <li><img src={logo_a2} /></li>
+                                <li><img src={logo_a1} /></li>
+                                <li><img src={logo_a2} /></li>
+                                <li><img src={logo_a3} /></li>
                             </ul>
                         </div>
                     </div>
@@ -245,14 +250,14 @@ class Home extends React.Component<IHomeProps, any> {
                     <div className={`partnerEnterprise`}>
                         <div className={`partnerEnterpriseBrand`}>
                             <ul>
-                                <li><img src="./logo_a1.png" /></li>
-                                <li><img src="./logo_a2.png" /></li>
-                                <li><img src="./logo_a3.png" /></li>
-                                <li><img src="./logo_a1.png" /></li>
-                                <li><img src="./logo_a2.png" /></li>
-                                <li><img src="./logo_a3.png" /></li>
-                                <li><img src="./logo_a2.png" /></li>
-                                <li><img src="./logo_a3.png" /></li>
+                            <li><img src={logo_a1} /></li>
+                            <li><img src={logo_a2} /></li>
+                            <li><img src={logo_a3} /></li>
+                            <li><img src={logo_a2} /></li>
+                            <li><img src={logo_a2} /></li>
+                            <li><img src={logo_a1} /></li>
+                            <li><img src={logo_a2} /></li>
+                            <li><img src={logo_a3} /></li>
                             </ul>
                         </div>
                         <div className={`cooperativePartnerLeftTitle`}>

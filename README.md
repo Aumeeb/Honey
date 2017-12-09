@@ -731,7 +731,7 @@ When you include a script in the HTML file that defines global variables and try
 You can avoid this by reading the global variable explicitly from the `window` object, for example:
 
 ```js
-const $ = window.$;
+const $  = window.$;
 ```
 
 This makes it obvious you are using a global variable intentionally rather than because of a typo.
