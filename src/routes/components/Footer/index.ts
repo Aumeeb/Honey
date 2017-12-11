@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import bgn_downbar from '../../Images/bgn_downbar.jpeg';
+//import bgn_downbar from '../../Images/bgn_downbar.jpeg';
 export const Address = styled.address`
     height: 375px;
     width: 100%;
@@ -11,7 +11,7 @@ export const Address = styled.address`
     background: url("../../Images/bgn_downbar.jpeg");
 `;
 
-export const Test = styled.div``
+export const Test = styled.div``;
 
 // .container {
 //     margin: 0 auto;
