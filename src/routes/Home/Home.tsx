@@ -2,7 +2,9 @@ import * as React from 'react';
 
 import Link from '../components/Link/Link'
 import LinkButton from '../components/LinkButton/LinkButton'
-import { Container } from "../components/Containers/index";
+import Banner from "../components/Banner/Banner";
+import {BannerBackgroundExpend } from "../components/Banner/";
+import { Container  } from "../components/Containers/index";
 import './Home.css';
 
 import nes_icon1 from '../Images/nes_icon1.png';
@@ -28,7 +30,7 @@ class Home extends React.Component<IHomeProps, any> {
         const { } = this.props;
         return (
             <div>
-                <div className={`horizontalExpand630`}>
+                {/* 
                     <div className={'swiper-container-banner'}>
                         <div className={'swiper-wrapper'}>
                             <div className={'swiper-slide-banner'}>
@@ -44,16 +46,16 @@ class Home extends React.Component<IHomeProps, any> {
 
                         </div>
                     </div>
-                    <script dangerouslySetInnerHTML={{
-                        __html: `
-            new Swiper('.swiper-container-banner', {
-              pagination: {
-                el: '.swiper-pagination',
-              },
-            });
-          `}}></script>
-                </div>
+              
+               */}
+               <BannerBackgroundExpend>
+                    <Banner 
+                    titleCN={[`中软云制造`,`平台优势`]}
+                    titleEN={[`ADVANTAGE OF PLATFORM`]}
+                    paragraph={[`跨行业的制造模块库 , 开发的集成体系 ;`,`以覆盖多行业的制造模型库聚集ISV ,`,`提供面向全制造行业的智能制造解决方案 。`]}
 
+                    />
+                </BannerBackgroundExpend>
                 <Container>
 
                     <div className={`latestProduct`}>
