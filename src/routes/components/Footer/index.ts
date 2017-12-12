@@ -36,26 +36,27 @@ const P = styled.p`
 
 export const PCopyRight =styled(P)`
 padding-top: 20px;
-`
+`;
 export const ICP  =styled(P)`
 padding-top: 10px;
-`
+`;
  
 
 
- 
-//   .address > div>header:first-child{
+ export const NavHeader= styled.header`
+ height: 40px;
+ font-style: normal; 
+ font-size: 20px;
+ `;
 
-//     height: 40px;
-//     font-style: normal; 
-//     font-size: 20px;
-//   }
-//   .address > div>nav{
-//     font-style: normal;
-//     line-height: 25px; 
-//     font-size: 16px;
-//     color:rgb(187, 187, 187);
-//   }
+ export const Nav= styled.nav`
+ font-style: normal;
+ line-height: 25px; 
+ font-size: 16px;
+ color:rgb(187, 187, 187);
+ `
+  
+ 
 //   .address > div :first-child{
 //     height: 120px;
 //   }

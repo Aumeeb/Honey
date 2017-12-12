@@ -3,7 +3,7 @@ import * as React from 'react'
 // import Link from '../Link/Link'
 import './Footer.css'
 import code2d from '../../Images/code2d.jpg';
-import { ICP, PCopyRight,FooterWarpper,NavWrapper,NavSubWrapper } from './';
+import { ICP, PCopyRight,FooterWarpper,NavWrapper,NavSubWrapper,NavHeader,Nav } from './';
 interface IFooterProps {
     navData?: Array<{
         headerTitle?: string,
@@ -37,53 +37,53 @@ class Footer extends React.Component<IFooterProps, any> {
             <div >
                 <NavWrapper>
                     <NavSubWrapper>
-                        <header>新闻中心</header>
-                        <nav>公司动态</nav>
-                        <nav>媒体聚焦</nav>
-                        <nav>社交媒体</nav>
-                        <nav><img src={code2d} style={{ width: 'auto', height: 'auto', marginTop: 10 }} /></nav>
+                        <NavHeader>新闻中心</NavHeader>
+                        <Nav>公司动态</Nav>
+                        <Nav>媒体聚焦</Nav>
+                        <Nav>社交媒体</Nav>
+                        <Nav><img src={code2d} style={{ width: 'auto', height: 'auto', marginTop: 10 }} /></Nav>
 
                     </NavSubWrapper>
                     <NavSubWrapper>
-                        <header>投资者</header>
-                        <nav>财务报表</nav>
-                        <nav>联交所公告</nav>
-                        <nav>IR日历</nav>
-                        <nav>分析师信息</nav>
-                        <nav>财务摘要</nav>
-                        <nav>股权结构</nav>
-                        <nav>推介材料</nav>
+                        <NavHeader>投资者</NavHeader>
+                        <Nav>财务报表</Nav>
+                        <Nav>联交所公告</Nav>
+                        <Nav>IR日历</Nav>
+                        <Nav>分析师信息</Nav>
+                        <Nav>财务摘要</Nav>
+                        <Nav>股权结构</Nav>
+                        <Nav>推介材料</Nav>
                     </NavSubWrapper>
                     <NavSubWrapper>
-                        <header>关于中软国际</header>
-                        <nav>公司概览</nav>
-                        <nav>愿景与使命</nav>
-                        <nav>发展历史</nav>
-                        <nav>管理团队</nav>
-                        <nav>公司荣誉</nav>
-                        <nav>社会责任</nav>
+                        <NavHeader>关于中软国际</NavHeader>
+                        <Nav>愿景与使命</Nav>
+                        <Nav>公司概览</Nav>
+                        <Nav>发展历史</Nav>
+                        <Nav>管理团队</Nav>
+                        <Nav>公司荣誉</Nav>
+                        <Nav>社会责任</Nav>
                     </NavSubWrapper>
                     <NavSubWrapper>
-                        <header>联系我们</header>
-                        <nav>香港</nav>
-                        <nav>北京</nav>
-                        <nav>上海</nav>
-                        <nav>西安</nav>
-                        <nav>____________</nav>
-                        <nav>人力资源</nav>
-                        <nav>媒体关系</nav>
-                        <nav>投资者关系</nav>
-                        <nav>业务接洽</nav>
+                        <NavHeader>联系我们</NavHeader>
+                        <Nav>香港</Nav>
+                        <Nav>北京</Nav>
+                        <Nav>上海</Nav>
+                        <Nav>西安</Nav>
+                        <Nav>____________</Nav>
+                        <Nav>人力资源</Nav>
+                        <Nav>媒体关系</Nav>
+                        <Nav>投资者关系</Nav>
+                        <Nav>业务接洽</Nav>
                     </NavSubWrapper>
                     <NavSubWrapper>
-                        <header>加入我们</header>
-                        <nav>CEO致辞</nav>
-                        <nav>加入中软国际的10个理由</nav>
-                        <nav>了解中软国际</nav>
-                        <nav>工作在中软国际</nav>
-                        <nav>培训与晋升</nav>
-                        <nav>快乐中软国际</nav>
-                        <nav>工作机会</nav>
+                        <NavHeader>加入我们</NavHeader>
+                        <Nav>CEO致辞</Nav>
+                        <Nav>加入中软国际的10个理由</Nav>
+                        <Nav>了解中软国际</Nav>
+                        <Nav>工作在中软国际</Nav>
+                        <Nav>培训与晋升</Nav>
+                        <Nav>快乐中软国际</Nav>
+                        <Nav>工作机会</Nav>
                     </NavSubWrapper>
                 </NavWrapper>
                 {/* 页脚 */}
