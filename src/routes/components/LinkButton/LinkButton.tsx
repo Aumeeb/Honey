@@ -1,5 +1,5 @@
 import * as React from 'react'
-import './LinkButton.css'
+import styled from 'styled-components';
 
 
 interface ILinkButtonProps {
@@ -41,7 +41,7 @@ class LinkButton extends React.Component<ILinkButtonProps, any>{
         const { linkValue, styleColor, to } = this.props;
         return (
             <div>
-                <a href={to} className={`linkButton`} style={this.changeStyle(styleColor)}>{linkValue}</a>
+                <StyledA href={to}  style={this.changeStyle(styleColor)}>{linkValue}</StyledA>
             </div>
         );
     }
@@ -49,3 +49,19 @@ class LinkButton extends React.Component<ILinkButtonProps, any>{
 
 
 export default LinkButton;
+
+
+const StyledA = styled.a`
+width: 100px;
+height: 28px;
+display: inline-block;
+border: rgb(3, 187, 227) 1px solid;
+color:  rgb(3, 187, 227);
+font-size: 14px;
+border-radius: 1px;
+line-height: 24px;
+text-align: center;
+text-decoration-line: none;
+`;
+
+ 

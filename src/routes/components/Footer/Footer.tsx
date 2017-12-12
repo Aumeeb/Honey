@@ -1,7 +1,7 @@
 
 import * as React from 'react'
 // import Link from '../Link/Link'
-import './Footer.css'
+//import './Footer.css'
 import code2d from '../../Images/code2d.jpg';
 import { ICP, PCopyRight,FooterWarpper,NavWrapper,NavSubWrapper,NavHeader,Nav } from './';
 interface IFooterProps {
@@ -87,7 +87,7 @@ class Footer extends React.Component<IFooterProps, any> {
                     </NavSubWrapper>
                 </NavWrapper>
                 {/* 页脚 */}
-                <FooterWarpper className='FooterWarpper'>
+                <FooterWarpper>
                     <PCopyRight>{footerDataExsits[0]}</PCopyRight>
                     <ICP>{footerDataExsits[1]}</ICP>
                 </FooterWarpper>
