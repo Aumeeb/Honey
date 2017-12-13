@@ -17,11 +17,11 @@ class Header extends React.Component {
     return (
       <StyDiv>
       
-        <TopBar style={{paddingRight:`40px`}}>
+        <TopBar>
 
           <StySpan ml={`40px`} mt={`-2px`} ><img src={navi_icon_language} /></StySpan>
           <StySpan ml={`10px`} lt={`35px`} >中国</StySpan>
-          <Link csstyle={{marginLeft:`36px` , float:`right`,lineHeight:`35px`}}  to={`/login`} >登录</Link>
+          <Link csstyle={{marginLeft:`36px` , float:`right`,lineHeight:`35px`,paddingRight:`40px`}}  to={`/login`} >登录</Link>
           <Link csstyle={{float:`right`,marginRight:`40px`,lineHeight:`35px`}} to={`/register`} >注册</Link>
         </TopBar>
         <div className='searchBar'>
