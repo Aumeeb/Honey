@@ -5,7 +5,6 @@ import bgn_downbar from '../../Images/bgn_downbar.jpeg';
 // 页脚的导航
 export const NavWrapper = styled.div`
     height: 375px;
-    width: 100%;
     padding-left: 140px;
     padding-right: 100px;
     padding-top: 70px;

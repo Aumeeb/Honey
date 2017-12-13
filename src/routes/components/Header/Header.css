@@ -66,21 +66,21 @@
 
 
   /* 导航条 TopBar.css */
-  .topBar{
+  /* .topBar{
     height: 36px;
     background: rgb(27, 35, 43);
     width:100%;
     color: white;
     font-size: 14px;
-  }
-  .topBar> span:first-child{
+  } */
+  /* .topBar> span:first-child{
     margin-left: 40px;
     margin-top: -2px;
   }
   .topBar> span:nth-child(2){
     margin-left: 10px;
     line-height: 35px;
-  }
+  } */
   .topBar> a:nth-child(3){
     margin-right: 36px;
     float: right;

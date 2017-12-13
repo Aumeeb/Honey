@@ -1,9 +1,8 @@
 
 import * as React from 'react'
 import Link from '../Link/Link'
-// import LinkButton from '../../components/LinkButton/LinkButton'
-import './Header.css'
-import s from "./Header.css";
+import { TopBar} from './Style'
+import { StySpan,StyDiv } from "../Containers/CommonStyle";
 
 import navi_icon_language from '../../Images/navi_icon_language.png';
 import navi_logo from '../../Images/navi_logo.png';
@@ -16,16 +15,15 @@ class Header extends React.Component {
   render() {
 
     return (
-      <div id='header-root'>
+      <StyDiv>
       
-        <div className={s.topBar}>
+        <TopBar style={{paddingRight:`40px`}}>
 
-          <span><img src={navi_icon_language} /></span>
-          <span>中国</span>
-          <Link to={`/login`} >登录</Link>
-          <Link to={`/register`} >注册</Link>
-          <Link to={`/developerCommunity`}>开发者社区</Link>
-        </div>
+          <StySpan ml={`40px`} mt={`-2px`} ><img src={navi_icon_language} /></StySpan>
+          <StySpan ml={`10px`} lt={`35px`} >中国</StySpan>
+          <Link csstyle={{marginLeft:`36px` , float:`right`,lineHeight:`35px`}}  to={`/login`} >登录</Link>
+          <Link csstyle={{float:`right`,marginRight:`40px`,lineHeight:`35px`}} to={`/register`} >注册</Link>
+        </TopBar>
         <div className='searchBar'>
           <span><img src={navi_logo} /></span>
           <span><img src={navi_icon_search} /></span>
@@ -42,7 +40,7 @@ class Header extends React.Component {
           <Link to={"/"}>产品中心</Link>
           <Link to={"/"}>首页</Link>
         </div>
-      </div>
+      </StyDiv>
     )
   }
 }

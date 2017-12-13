@@ -14,7 +14,7 @@ interface ILinkProps {
     children?: React.ReactNode;
     onClick?: () => void;
 
-    className?: string;
+    csstyle?: React.CSSProperties
 }
 interface ILinkState {
 
@@ -48,9 +48,9 @@ class Link extends React.Component<ILinkProps, ILinkState>{
     // };
 
     render() {
-        const { to, children, onClick, className } = this.props;
+        const { to, children, onClick, csstyle } = this.props;
         return (
-            <a href={to} onClick={onClick} className={className}>
+            <a href={to} onClick={onClick} style={csstyle}   >
                 {children}
             </a>
         );

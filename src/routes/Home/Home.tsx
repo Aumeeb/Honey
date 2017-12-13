@@ -4,8 +4,8 @@ import Link from '../components/Link/Link'
 import LinkButton from '../components/LinkButton/LinkButton'
 import Banner from "../components/Banner/Banner";
 import {BannerBackgroundExpend } from "../components/Banner/";
-import { Container  } from "../components/Containers/index";
-import './Home.css';
+import { Container  } from "../components/Containers/CommonStyle";
+// import './Home.css';
 
 import nes_icon1 from '../Images/nes_icon1.png';
 import nes_icon2 from '../Images/nes_icon2.png';
@@ -65,7 +65,7 @@ class Home extends React.Component<IHomeProps, any> {
                         <div className={`detail`}>中国电信股份有限公司山西分公司 2013 年 移动营销门户建设工程应用软件 产品描述 东软集团股份有限公司
               2013中国电信股份有限公司山西分公司 2013 年 移动营销门户建设工程应用软件 产品描述 东软集团股份有限公司 2013
 
-              <Link to='/about' className={`primaryLight`}>
+              <Link to='/about' >
                                 了解详情>
               </Link>
                         </div>

@@ -3,7 +3,7 @@ import * as React from 'react'
 // import Link from '../Link/Link'
 //import './Footer.css'
 import code2d from '../../Images/code2d.jpg';
-import { ICP, PCopyRight,FooterWarpper,NavWrapper,NavSubWrapper,NavHeader,Nav } from './';
+import { ICP, PCopyRight,FooterWarpper,NavWrapper,NavSubWrapper,NavHeader,Nav } from './Style';
 interface IFooterProps {
     navData?: Array<{
         headerTitle?: string,
