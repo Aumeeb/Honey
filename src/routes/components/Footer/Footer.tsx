@@ -22,10 +22,7 @@ import { ICP, PCopyRight, FooterWarpper, NavWrapper, NavSubWrapper, NavHeader, N
 
 
 interface IFooterProps {
-    navData?: Array<{
-        headerTitle?: string,
-        subTitle?: string[],
-    }>
+    navData?: Array<{headerTitle?: string,subTitle?: string[], }>
     footerData?: string[];
 }
 

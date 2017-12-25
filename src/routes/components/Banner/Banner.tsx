@@ -24,7 +24,7 @@ export default class Banner extends React.Component<BannerProps, any> {
         let jsxEleArr= new Array<JSX.Element>();
         if(arr!=undefined){
             arr.forEach(val=>{
-                jsxEleArr.push(<Brief>{val}</Brief>)
+                jsxEleArr.push(<Brief key={val}>{val}</Brief>)
             })
         }
         return jsxEleArr;

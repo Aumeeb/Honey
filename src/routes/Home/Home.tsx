@@ -24,7 +24,7 @@ type Report = { english: number, chinese: number, history?: number };
 // let myScore: Report = { english: 50, chinese: 99, history: 0 };
  
 /**
- * 🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️ 
+ * 🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️️🏝️🏝️🏝️🏝️🏝️🏝️🏝️ 
  * 使用createStore函数 创建一个 store   第一个参数是Reducer 第二个是存储增强可以省略
  */
 const store = createStore((state: Report = { english: 46, chinese: 99 }, action: SchoolAction) => {
@@ -41,18 +41,22 @@ const store = createStore((state: Report = { english: 46, chinese: 99 }, action:
 }, )
 
 /**
- * 🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️
- * add event to dispatch
+ * 💅💅💅💅 step 2 订阅💅💅💅💅
+ */
+store.subscribe(() => {
+   
+    console.log(`fn1  current state  `, store.getState())
+
+})
+
+/**
+ * 🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️️️️️️️🏜️🏜️🏜️🏜️🏜️🏜️🏜️
+ * step 3 派发事件
  */
 store.dispatch<SchoolAction>({ type: `biteAss` });
 store.dispatch<SchoolAction>({ type: `acceptGift` });
 
-/**
- * 💅💅💅💅bingo execute💅💅💅💅
- */
-store.subscribe(() => {
-    console.log(`fn1  current state`, store.getState())
-})
+
 
 
 

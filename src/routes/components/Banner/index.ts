@@ -54,7 +54,7 @@ margin:auto;
 export const SwiperWrapper = styled.div.attrs<any>({
   // we can define static props
   // or we can define dynamic ones
-   backgroundURL : `${banner2}`,
+   backgroundurl : `${banner2}`,
 }) `
 text-align: center;
 font-size: 18px;
@@ -63,7 +63,7 @@ width: 1440px;
 height: 630px;
 background:url(${banner2});
 /* here we use the dynamically computed props */
-background:   ${(props :any)=>props.backgroundURL} ;
+background:   ${(props :any)=>props.backgroundurl} ;
 `;
 
 
