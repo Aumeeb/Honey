@@ -3,7 +3,24 @@ import * as React from 'react'
 // import Link from '../Link/Link'
 //import './Footer.css'
 import code2d from '../../Images/code2d.jpg';
-import { ICP, PCopyRight,FooterWarpper,NavWrapper,NavSubWrapper,NavHeader,Nav } from './Style';
+import { ICP, PCopyRight, FooterWarpper, NavWrapper, NavSubWrapper, NavHeader, Nav } from './Style';
+
+
+// function classConstructorDec(constructor: Function) {
+
+// 	constructor.prototype.testProperty ="testProperty_value";
+// }
+
+// @classConstructorDec
+// class ClassWithConstructor {
+
+// }
+
+
+// let classConstrInstance = new ClassWithConstructor();
+// console.log(`classConstrInstance.testProperty : `+ `${(classConstrInstance as any).testProperty}`);
+
+
 interface IFooterProps {
     navData?: Array<{
         headerTitle?: string,
@@ -11,6 +28,7 @@ interface IFooterProps {
     }>
     footerData?: string[];
 }
+
 class Footer extends React.Component<IFooterProps, any> {
     constructor(props: IFooterProps) {
         super(props)

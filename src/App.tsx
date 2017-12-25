@@ -10,7 +10,6 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-
         <Router history={history.createBrowserHistory()}>
           <Route component={Home} />
         </Router>
