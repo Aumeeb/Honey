@@ -6,62 +6,66 @@ import Banner from "../components/Banner/Banner";
 import { BannerBackgroundExpend } from "../components/Banner/";
 import { Container } from "../components/Containers/CommonStyle";
 
+import {  connect } from "react-redux";
 
 import nes_icon1 from '../Images/nes_icon1.png';
 import nes_icon2 from '../Images/nes_icon2.png';
 import logo_a1 from '../Images/logo_a1.png';
 import logo_a2 from '../Images/logo_a2.png';
 import logo_a3 from '../Images/logo_a3.png';
-import { createStore, AnyAction } from "redux";
 
-type SchoolType = 'failure' | 'takeParents' | 'cannotGoHome' | 'biteAss' | 'kneel' | 'acceptGift'
-class SchoolAction implements AnyAction {
-    [extraProps: string]: any;
-    type: SchoolType;
-}
+// import { createStore, AnyAction } from "redux";
 
-type Report = { english: number, chinese: number, history?: number };
-// let myScore: Report = { english: 50, chinese: 99, history: 0 };
+// type SchoolType = 'failure' | 'takeParents' | 'cannotGoHome' | 'biteAss' | 'kneel' | 'acceptGift'
+// class SchoolAction implements AnyAction {
+//     [extraProps: string]: any;
+//     type: SchoolType;
+// }
+
+// type Report = { english: number, chinese: number, history?: number };
+// // let myScore: Report = { english: 50, chinese: 99, history: 0 };
  
-/**
- * 🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️️🏝️🏝️🏝️🏝️🏝️🏝️🏝️ 
- * 使用createStore函数 创建一个 store   第一个参数是Reducer 第二个是存储增强可以省略
- */
-const store = createStore((state: Report = { english: 46, chinese: 99 }, action: SchoolAction) => {
-    switch (action.type) {
-        case 'biteAss':
-            state.chinese++
-            break;
-        case 'acceptGift':
-            state.english++
-        default:
-            break;
-    }
-    return state
-}, )
+// /**
+//  * 🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️️🏝️🏝️🏝️🏝️🏝️🏝️🏝️ 
+//  * 使用createStore函数 创建一个 store   第一个参数是Reducer 第二个是存储增强可以省略
+//  */
+// const store = createStore((state: Report = { english: 46, chinese: 99 }, action: SchoolAction) => {
+//     switch (action.type) {
+//         case 'biteAss':
+//             state.chinese++
+//             break;
+//         case 'acceptGift':
+//             state.english++
+//         default:
+//             break;
+//     }
+//     return state
+// }, )
 
-/**
- * 💅💅💅💅 step 2 订阅💅💅💅💅
- */
-store.subscribe(() => {
+// /**
+//  * 💅💅💅💅 step 2 订阅💅💅💅💅
+//  */
+// store.subscribe(() => {
    
-    console.log(`fn1  current state  `, store.getState())
+//     console.log(`fn1  current state  `, store.getState())
 
-})
+// })
 
-/**
- * 🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️️️️️️️🏜️🏜️🏜️🏜️🏜️🏜️🏜️
- * step 3 派发事件
- */
-store.dispatch<SchoolAction>({ type: `biteAss` });
-store.dispatch<SchoolAction>({ type: `acceptGift` });
-
-
+// /**
+//  * 🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️🏜️️️️️️️🏜️🏜️🏜️🏜️🏜️🏜️🏜️
+//  * step 3 派发事件
+//  */
+// store.dispatch<SchoolAction>({ type: `biteAss` });
+// store.dispatch<SchoolAction>({ type: `acceptGift` });
 
 
 
-interface IHomeProps {
 
+
+export interface IHomeProps {
+    english: number, 
+    chinese: number, 
+    history?: number 
 }
 class Home extends React.Component<IHomeProps, any> {
     constructor(props: IHomeProps) {
@@ -319,6 +323,19 @@ class Home extends React.Component<IHomeProps, any> {
             </div>
         );
     }
-}
 
-export default Home
+   
+}
+function mapStateToProps(state :any):any{
+    return {
+        homeInfo :  state
+    }
+}
+// function mapDispatchToProps(dispatch:any){
+//     return{
+
+//     }
+// }
+
+export default connect(mapStateToProps)(Home);
+// export default Home
