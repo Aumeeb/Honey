@@ -2,7 +2,7 @@ import { createStore  } from "redux";
 import rootReducer  from "../reducers/index";
 
 
-export default function configureStore(){
-    return createStore(rootReducer)
+export default function configureStore(initState:any){
+    return createStore(rootReducer,initState)
 }
  

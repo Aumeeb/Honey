@@ -5,8 +5,12 @@ import LinkButton from '../components/LinkButton/LinkButton'
 import Banner from "../components/Banner/Banner";
 import { BannerBackgroundExpend } from "../components/Banner/";
 import { Container } from "../components/Containers/CommonStyle";
+import s from './Home.css';
 
-import {  connect } from "react-redux";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+
+import { getGift ,ILogin} from "../../actions/action";
 
 import nes_icon1 from '../Images/nes_icon1.png';
 import nes_icon2 from '../Images/nes_icon2.png';
@@ -24,7 +28,7 @@ import logo_a3 from '../Images/logo_a3.png';
 
 // type Report = { english: number, chinese: number, history?: number };
 // // let myScore: Report = { english: 50, chinese: 99, history: 0 };
- 
+
 // /**
 //  * 🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️🏝️️🏝️🏝️🏝️🏝️🏝️🏝️🏝️ 
 //  * 使用createStore函数 创建一个 store   第一个参数是Reducer 第二个是存储增强可以省略
@@ -46,7 +50,7 @@ import logo_a3 from '../Images/logo_a3.png';
 //  * 💅💅💅💅 step 2 订阅💅💅💅💅
 //  */
 // store.subscribe(() => {
-   
+
 //     console.log(`fn1  current state  `, store.getState())
 
 // })
@@ -63,9 +67,12 @@ import logo_a3 from '../Images/logo_a3.png';
 
 
 export interface IHomeProps {
-    english: number, 
-    chinese: number, 
-    history?: number 
+    english: number,
+    chinese: number,
+    history?: number
+
+    homeInfo: any;
+    action: (data:any)=> ILogin;
 }
 class Home extends React.Component<IHomeProps, any> {
     constructor(props: IHomeProps) {
@@ -108,7 +115,7 @@ class Home extends React.Component<IHomeProps, any> {
                 </BannerBackgroundExpend>
                 <Container>
 
-                    <div className={`latestProduct`}>
+                    <div className={`${s.latestProduct}`}>
 
                         <div className={`latestProductTitle`} ><span>最新</span><span>产品</span></div>
                         <div className={`latestProductETitle`} >NEW PRODUCTS</div>
@@ -324,18 +331,18 @@ class Home extends React.Component<IHomeProps, any> {
         );
     }
 
-   
+
 }
-function mapStateToProps(state :any):any{
+function mapStateToProps(state: any) {
     return {
-        homeInfo :  state
+        homeInfo: state.homeReducer
     }
 }
-// function mapDispatchToProps(dispatch:any){
-//     return{
+function mapDispatchToProps(dispatch: any) {
+    return {
+        action: bindActionCreators(getGift, dispatch)
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Home)
 
-//     }
-// }
-
-export default connect(mapStateToProps)(Home);
 // export default Home

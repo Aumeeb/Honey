@@ -6,12 +6,26 @@ export class HomeAction implements AnyAction {
     [extraProps: string]: any;
     type: HomeActionType;
 
-    getGift= (state: IHomeProps)=>{
+    getGift = (state: IHomeProps) => {
         state.chinese++;
         return state;
     }
-    biteAss=(state:IHomeProps  )=>{
-        state.english=0;
+    biteAss = (state: IHomeProps) => {
+        state.english = 0;
         return state;
     }
+}
+
+export interface ILogin {
+    type: HomeActionType,
+    data: any;
+}
+
+export function getGift(data: any) {
+    let result: ILogin = {
+        type: 'acceptGift',
+        data: data
+    }
+    return result;
+
 }
