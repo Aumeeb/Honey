@@ -1,17 +1,18 @@
 import { AnyAction } from "redux";
-import { IHomeProps } from "../routes/Home/Home";
+import { IHomeState } from "../routes/Home/Home";
 
 type HomeActionType = 'failure' | 'takeParents' | 'cannotGoHome' | 'biteAss' | 'kneel' | 'acceptGift'
 export class HomeAction implements AnyAction {
     [extraProps: string]: any;
     type: HomeActionType;
 
-    getGift = (state: IHomeProps) => {
-        state.chinese++;
+    getGift = (state: IHomeState) => {
         return state;
     }
-    biteAss = (state: IHomeProps) => {
-        state.english = 0;
+    biteAss = (state: IHomeState) => {
+        if (state.english != undefined) {
+            state.english += 1;
+        }
         return state;
     }
 }

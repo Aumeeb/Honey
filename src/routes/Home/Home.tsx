@@ -74,6 +74,9 @@ export interface IHomeProps {
     homeInfo: any;
     action: (data:any)=> ILogin;
 }
+export interface IHomeState{
+    english?: number
+}
 class Home extends React.Component<IHomeProps, any> {
     constructor(props: IHomeProps) {
         super(props);
