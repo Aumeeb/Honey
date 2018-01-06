@@ -10,7 +10,7 @@ import s from './Home.css';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import { getGift ,ILogin} from "../../actions/action";
+import { HomeAction, FullScore, Sex, IComment } from "../../actions/action";
 
 import nes_icon1 from '../Images/nes_icon1.png';
 import nes_icon2 from '../Images/nes_icon2.png';
@@ -64,19 +64,34 @@ import logo_a3 from '../Images/logo_a3.png';
 
 
 
+// function printer(){
 
+//     console.log("🐷")
+//     // console.log(constructor.prototype.Component);
+//     console.log("🐷")
+// }
+function printer() {
+
+    return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+        console.log(target);
+        console.log(propertyKey);
+        console.log(descriptor);
+    }
+}
 
 export interface IHomeProps {
     english: number,
     chinese: number,
     history?: number
-
     homeInfo: any;
-    action: (data:any)=> ILogin;
+    sendGiftsAction: () => FullScore;
+    commentAction: (sex: Sex) => IComment;
 }
-export interface IHomeState{
+export interface IHomeState {
     english?: number
 }
+
+
 class Home extends React.Component<IHomeProps, any> {
     constructor(props: IHomeProps) {
         super(props);
@@ -84,30 +99,19 @@ class Home extends React.Component<IHomeProps, any> {
     }
 
 
-
+    @printer()
     render() {
-        <div></div>
-        const { } = this.props;
+
+        const { sendGiftsAction,commentAction } = this.props;
+
+        console.log("🐷")
+        console.log(this.props.homeInfo);
+
         return (
             <div>
-                {/* 
-                    <div className={'swiper-container-banner'}>
-                        <div className={'swiper-wrapper'}>
-                            <div className={'swiper-slide-banner'}>
-                                <div className={`bannerAdvertment`}>
-                                    <span>中软云制造</span><span>平台优势</span>
-                                    <div>ADVANTAGE OF PLATFORM</div>
-                                    <p>跨行业的制造模块库 , 开发的集成体系 ;</p>
-                                    <p>以覆盖多行业的制造模型库聚集ISV ,</p>
-                                    <p>提供面向全制造行业的智能制造解决方案 。</p>
-                                    <div><LinkButton linkValue={'开启制造之旅'} styleColor={'white'} /></div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-              
-               */}
+                <button onClick={() => { sendGiftsAction() }}>赠送礼物</button>
+                <div></div>
+                <button onClick={() => { commentAction('男') }}>获取评语</button>
                 <BannerBackgroundExpend>
                     <Banner
                         titleCN={[`中软云制造`, `平台优势`]}
@@ -343,9 +347,10 @@ function mapStateToProps(state: any) {
 }
 function mapDispatchToProps(dispatch: any) {
     return {
-        action: bindActionCreators(getGift, dispatch)
+        sendGiftsAction: bindActionCreators(HomeAction.sendGifts, dispatch),
+        commentAction: bindActionCreators(HomeAction.comment, dispatch)
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Home)
 
-// export default Home
+
